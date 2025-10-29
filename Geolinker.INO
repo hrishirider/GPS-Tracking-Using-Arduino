@@ -1,4 +1,4 @@
-#include <GeoLinkerLite.h>
+ #include <GeoLinkerLite.h>
 
 
 GeoLinkerLite geoLinker(Serial, Serial);
@@ -7,26 +7,25 @@ void setup() {
     Serial.begin(9600);
     delay(1000);
     
-    // Configuration
+    // Configure settings (optional - defaults are set in the library)
     geoLinker.setResetPin(2);                    // Reset control pin
     geoLinker.setGSMPins(8, 9);                  // GSM RX, TX pins
     geoLinker.setModemAPN("your.apn.here");      // Your carrier's APN
     geoLinker.setAPIKey("your_api_key");         // Your GeoLinker API key
     geoLinker.setDeviceID("arduino_tracker");    // Unique device ID / Device name
-    
-    geoLinker.setMaxRetries(3);                  // Max retry attempts to send a data point via GPRS
+    geoLinker.setMaxRetries(3);                  // Max retry attempts to send a data ponit via GPRS
     geoLinker.setDebugLevel(1);                  // Debug level
-    geoLinker.setTimeOffset(5, 30);              // Timezone: Eg. India +5:30 hours
-
-   
+    geoLinker.setTimeOffset(5, 30);              // Timezone: Eg. india +5:30 hours
+    
+    // Initialize the library
     geoLinker.begin();
-
-
-    delay(1000);
-    geoLinker.run();  // Runs only once; system resets or halts afterward
+    
+    // Run the main functionality
+    delay(1000);                                // Increase this delay to increase upate interval
+    geoLinker.run();
 }
 
 void loop() {
-   
+    // Should never reach here as both modes end with reset
     delay(1000);
-}
+} 
