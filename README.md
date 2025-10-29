@@ -62,7 +62,3 @@ For complete setup instructions, circuit diagrams, code explanation, and trouble
 - [GeoLinker Lite Library](https://github.com/Circuit-Digest/GeoLinkerLite)
 - [GeoLinker Cloud Platform](https://www.circuitdigest.cloud/)
 - [ESP32 GPS Tracker](https://circuitdigest.com/microcontroller-projects/simple-gps-tracker-using-esp32-visualize-data-on-map)
-
-## 📄 License
-
-MIT License - see LICENSE file for details.
